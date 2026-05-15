@@ -1,8 +1,8 @@
-# CISR: Causal Intervention for Blind Image Super-Resolution
+# CISR: Learning Invariant Representations for Blind Image Super-Resolution via Causal Intervention
 
 
 
-PyTorch implementation of **CISR** — reformulates blind SR as causal intervention problem via Structural Causal Model (SCM).
+PyTorch implementation of **CISR** - Learning Invariant Representations for Blind Image Super-Resolution via Causal Intervention.
 
 ## Method
 
