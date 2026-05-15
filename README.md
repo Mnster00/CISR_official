@@ -21,7 +21,7 @@ PyTorch implementation of **CISR** — reformulates blind SR as causal intervent
 - InfoNCE loss with $\tau=0.07$, $K=1024$ negatives
 
 **Loss**: 
-$$\mathcal{L}_{total} = \lambda_{rec}\mathcal{L}_{rec} + \lambda_{SR}\mathcal{L}_{SR} + \lambda_{KL}\mathcal{L}_{KL} + \lambda_{NCE}(\mathcal{L}_{NCE}^c + \mathcal{L}_{NCE}^d) + \lambda_{adv}\mathcal{L}_{adv} + \lambda_{prior}\mathcal{L}_{prior}$$
+L_total = λ_rec·L_rec + λ_SR·L_SR + λ_KL·L_KL + λ_NCE·(L_NCE^c + L_NCE^d) + λ_adv·L_adv + λ_prior·L_prior
 
 
 
