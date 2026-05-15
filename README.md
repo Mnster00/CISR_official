@@ -4,7 +4,7 @@
 
 PyTorch implementation of **CISR** — reformulates blind SR as causal intervention problem via Structural Causal Model (SCM).
 
-## Algorithm
+## Method
 
 **Core Insight**: LR image $X$ is a collider of independent content $C$ and degradation $D$. Existing methods capture spurious correlations; CISR implements do-calculus to decouple them.
 
