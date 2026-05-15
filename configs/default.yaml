@@ -1,0 +1,46 @@
+model:
+  backbone_name: "dinov2_vits14"
+  latent_dim: 256
+  degradation_latent_dim: 256
+  decoder_num_features: 128
+  decoder_num_res_blocks: 16
+  freeze_backbone: true
+  num_heads: 8
+  cafi_dropout: 0.1
+
+data:
+  hr_image_dirs:
+    - "data/DIV2K/train"
+    - "data/Flickr2K"
+    - "data/LSDIR"
+    - "data/FFHQ"
+  hr_patch_size: 192
+  scale_factor: 4
+
+degradation:
+  blur_sig_x_range: [0.2, 3.0]
+  blur_sig_y_range: [0.2, 3.0]
+  blur_rot_range: [-180, 180]
+  noise_range: [0, 25]
+  jpeg_range: [30, 95]
+  second_order_prob: 0.5
+
+loss:
+  lambda_rec: 1.0
+  lambda_sr: 1.0
+  lambda_kl: 0.01
+  lambda_nce: 0.1
+  lambda_adv: 0.1
+  lambda_prior: 0.001
+  temperature: 0.07
+
+train:
+  batch_size: 8
+  num_workers: 4
+  num_degradation_variants: 8
+  lr: 0.0002
+  beta1: 0.9
+  beta2: 0.999
+  total_iters: 500000
+  log_interval: 100
+  save_interval: 5000
